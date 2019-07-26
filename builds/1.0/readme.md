@@ -51,3 +51,4 @@ Total is ~$10
   * You may be able to use PE0-3 (pins 3, 6, 19, and 22)
 * make PCB smaller (there's lots of wasted space currently)
 * add mounting screw holes
+* R14 must be 0-Ohm!

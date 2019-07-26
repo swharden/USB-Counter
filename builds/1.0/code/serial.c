@@ -54,24 +54,11 @@ void SerialSendString(const char *s)
         SerialSend(*s++);
 }
 
-void SerialSendIntASCII(unsigned int val)
-{
-    // send a 16-bit (2-byte) int as ASCII
-    char preVal = ' ';
-    unsigned int divby = 10000;
-    while (divby >= 1)
-    {
-        SerialSend('0' + val / divby);
-        val -= (val / divby) * divby;
-        divby /= 10;
-    }
-}
-
-void SerialSendLongASCII(unsigned long val)
+void SerialSend_UINT32(uint32_t val)
 {
     // send a 32-bit (4-byte) long as ASCII
     char preVal = ' ';
-    unsigned long divby = 100000000;
+    uint32_t divby = 1000000000;
     while (divby >= 1)
     {
         SerialSend('0' + val / divby);

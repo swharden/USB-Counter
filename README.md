@@ -9,3 +9,19 @@ If you don't have a precision 1Hz gate available, you're still covered! This dev
 **Project status: Alpha** - this project is in active development, and designs are not yet ready for serious public assessment.
 
 ![](graphics/2019-07-25.jpg)
+
+## Revision 1.0
+
+Serial communication works great. The MAX230 does great and also supplies a clean 3.3V to the rest of the board.
+
+The counter IC wiring isn't correct. I was able to fix it with bodge wires but a revision 2 board is required. I don't know how messed this up. Changes include:
+
+* RF must go into pin 1/2
+* Gate must go into pin 7
+* Pin 11 must be tied to VCC (3.3V)
+
+![](graphics/2019-07-26-bodge.JPG)
+
+When wired properly it works great. A TCXO clocks the microcontroller. A software timer generates the gate signal. When measuring the frequency of its own clock I get exactly 10 million. In this example I stuck a 25MHz can oscillator in the breadboard. A new line is printed every second indicating frequency:
+
+![](graphics/2019-07-26-output.png)

@@ -25,3 +25,5 @@ The counter IC wiring isn't correct. I was able to fix it with bodge wires but a
 When wired properly it works great. A TCXO clocks the microcontroller. A software timer generates the gate signal. When measuring the frequency of its own clock I get exactly 10 million. In this example I stuck a 25MHz can oscillator in the breadboard. A new line is printed every second indicating frequency:
 
 ![](graphics/2019-07-26-output.png)
+
+The front-end also needs improvements. Make it as similar to the LTSpice circuit as possible.

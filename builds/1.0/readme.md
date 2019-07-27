@@ -13,9 +13,6 @@ The current PCB fabrication cost at OSHPark is $17.40 for 3 ($5.80 each)
 See Rev2 notes below for thoughts regarding changing resistor values for the front-end
 ![](schematic.png)
 
-### Simulated Front-End (200 mV PPV input signal)
-![](LTSpice/screenshot.png)
-
 ## Features
 * USB connection allows PC monitoring/logging of frequency
 * USB connection not required
@@ -52,3 +49,11 @@ Total is ~$10
 * make PCB smaller (there's lots of wasted space currently)
 * add mounting screw holes
 * R14 must be 0-Ohm!
+
+### Notes after building
+
+_see the front page_
+
+Make the front-end like this:
+
+![](LTSpice/Draft3.JPG)

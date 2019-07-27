@@ -54,6 +54,6 @@ Total is ~$10
 
 _see the front page_
 
-Make the front-end like this:
+Make the front-end like this. Make R3 50 Ohms.
 
 ![](LTSpice/Draft3.jpg)

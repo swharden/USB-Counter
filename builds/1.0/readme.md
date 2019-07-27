@@ -56,4 +56,4 @@ _see the front page_
 
 Make the front-end like this:
 
-![](LTSpice/Draft3.JPG)
+![](LTSpice/Draft3.jpg)

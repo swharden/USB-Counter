@@ -1,29 +1,20 @@
 # USB Counter
 
-This project folder contains the design, notes, and experiments relating to a USB frequency counter (which can be configured as a pulse counter). USB connectivity is ideal for data-logging applications where counts are to be monitored over time. 
-
-Like other counter designs this one has an _input_ and a _gate_. Every time the gate goes high, the count is transmitted to the computer. Counts "roll over" from one gate cycle to the next so no cycle is ever lost. This allows high-precision measurements given long periods of recording time.
-
-If you don't have a precision 1Hz gate available, you're still covered! This device has a 10MHz temperature-compensated crystal oscillator which can be divided-down (in software) and used as a 1Hz gate.
-
-**Project status: Alpha** - this project is in active development, and designs are not yet ready for serious public assessment.
+This project contains the design files and notes for a USB counter. This device can measure RF (when the small signal amplifier front-end is populated) or TTL pulses (0-3.3V).
 
 ![](graphics/2019-07-25.jpg)
 
-## Revision 1.0
+## Design Goals
 
-Serial communication works great. The MAX230 does great and also supplies a clean 3.3V to the rest of the board.
+**Precision frequency measurement:** One advantage of this counter is that it is never reset. Its core is a 32-bit counter, and every gate cycle transmits the current count to the computer over USB. Because every input cycle is measured high precision measurements of frequency over long periods of time are possible. For example, 1000 repeated measurements with a 1Hz gate allows frequency measurement to a precision of 0.01 Hz.
 
-The counter IC wiring isn't correct. I was able to fix it with bodge wires but a revision 2 board is required. I don't know how messed this up. Changes include:
+**Optional 7-segment display:** This device can be used without a computer, as it can be interfaced with a SPI-driven 8-digit 7-segment display module.
 
-* RF must go into pin 1/2
-* Gate must go into pin 7
-* Pin 11 must be tied to VCC (3.3V)
+**Internal or external gating:** The microcontroller is capable of generating gate cycles in software. Precision is limited to that of the TCXO used to clock the microcontroller (2.5 PPM). For higher-precision gating a resistor may be lifted and an external gate applied (e.g., 1PPS GPS signal).
 
-![](graphics/2019-07-26-bodge.JPG)
+**USB Pulse Counter:** While counting pulses is not the primary design goal of this project, this device can serve as a USB pulse counter. The RF amplifier pathway can be omitted, and the input signal (0-3.3V pulses) be delivered directly into the counter chip.
 
-When wired properly it works great. A TCXO clocks the microcontroller. A software timer generates the gate signal. When measuring the frequency of its own clock I get exactly 10 million. In this example I stuck a 25MHz can oscillator in the breadboard. A new line is printed every second indicating frequency:
+## Builds
 
-![](graphics/2019-07-26-output.png)
-
-The front-end also needs improvements. Make it as similar to the LTSpice circuit as possible.
+* [Revision 1.0](/builds/1.0) was built on 2019-07-26
+* [Revision 1.1](/builds/1.1) is under development

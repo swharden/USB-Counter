@@ -646,7 +646,7 @@ U 1 1 5D3E26D6
 P 1250 1800
 F 0 "J3" H 1307 2267 50  0000 C CNN
 F 1 "USB_B_Micro" H 1307 2176 50  0000 C CNN
-F 2 "" H 1400 1750 50  0001 C CNN
+F 2 "Connector_USB:USB_Micro-B_Molex-105017-0001" H 1400 1750 50  0001 C CNN
 F 3 "~" H 1400 1750 50  0001 C CNN
 	1    1250 1800
 	1    0    0    -1  
@@ -1223,4 +1223,37 @@ Wire Notes Line
 	10450 900  9700 900 
 Text Notes 9700 850  0    98   ~ 0
 LCD
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5D44527F
+P 10050 2550
+F 0 "H1" H 10150 2596 50  0000 L CNN
+F 1 "MountingHole" H 10150 2505 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_Pad_Via" H 10050 2550 50  0001 C CNN
+F 3 "~" H 10050 2550 50  0001 C CNN
+	1    10050 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5D4460C1
+P 10050 2850
+F 0 "H2" H 10150 2896 50  0000 L CNN
+F 1 "MountingHole" H 10150 2805 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_Pad_Via" H 10050 2850 50  0001 C CNN
+F 3 "~" H 10050 2850 50  0001 C CNN
+	1    10050 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5D463B97
+P 10050 3150
+F 0 "H3" H 10150 3196 50  0000 L CNN
+F 1 "MountingHole" H 10150 3105 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_Pad_Via" H 10050 3150 50  0001 C CNN
+F 3 "~" H 10050 3150 50  0001 C CNN
+	1    10050 3150
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

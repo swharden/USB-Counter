@@ -1,5 +1,11 @@
 # USB Frequency Counter (rev 1.1)
 
+![](pcb-render.PNG)
+
+### PCB Design
+![](pcb-design.PNG)
+
+### Schematic
 ![](schematic.png)
 
 ## Changes from 1.0
@@ -12,7 +18,7 @@
   * allows much faster serial transmission
   * no longer accepts external 10MHz reference
   * may still accept external gate
-* ***added screw holes***
+* added screw holes
 * switched to micro USB (from mini USB)
 
 ## TODO: order

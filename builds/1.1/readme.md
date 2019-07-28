@@ -1,5 +1,7 @@
 # USB Frequency Counter (rev 1.1)
 
+I ordered this PCB on 2019-07-28
+
 ![](pcb-rndr.png)
 
 ### PCB Design

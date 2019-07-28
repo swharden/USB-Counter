@@ -792,50 +792,6 @@ Wire Wire Line
 Wire Wire Line
 	1250 4850 1350 4850
 $Comp
-L Device:D D3
-U 1 1 5D5548F3
-P 2150 5100
-F 0 "D3" V 2196 5021 50  0000 R CNN
-F 1 "D" V 2105 5021 50  0000 R CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2150 5100 50  0001 C CNN
-F 3 "~" H 2150 5100 50  0001 C CNN
-	1    2150 5100
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:D D4
-U 1 1 5D555473
-P 2450 5100
-F 0 "D4" V 2404 5179 50  0000 L CNN
-F 1 "D" V 2495 5179 50  0000 L CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2450 5100 50  0001 C CNN
-F 3 "~" H 2450 5100 50  0001 C CNN
-	1    2450 5100
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR017
-U 1 1 5D5A15B6
-P 2300 5350
-F 0 "#PWR017" H 2300 5100 50  0001 C CNN
-F 1 "GND" H 2305 5177 50  0000 C CNN
-F 2 "" H 2300 5350 50  0001 C CNN
-F 3 "" H 2300 5350 50  0001 C CNN
-	1    2300 5350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2150 5300 2300 5300
-Wire Wire Line
-	2150 5300 2150 5250
-Wire Wire Line
-	2300 5300 2450 5300
-Connection ~ 2300 5300
-Wire Wire Line
-	2300 5350 2300 5300
-Wire Wire Line
-	2450 5300 2450 5250
-$Comp
 L Transistor_BJT:MMBT3904 Q1
 U 1 1 5D352017
 P 3350 4850
@@ -846,15 +802,6 @@ F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 3350 4850 50  000
 	1    3350 4850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2450 4950 2450 4850
-Wire Wire Line
-	2450 4850 2150 4850
-Wire Wire Line
-	2150 4950 2150 4850
-Connection ~ 2150 4850
-Wire Wire Line
-	2150 4850 2050 4850
 $Comp
 L Device:C C3
 U 1 1 5D633781
@@ -866,9 +813,6 @@ F 3 "~" H 2700 4850 50  0001 C CNN
 	1    2700 4850
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	2550 4850 2450 4850
-Connection ~ 2450 4850
 Wire Wire Line
 	3050 4550 2950 4550
 Wire Wire Line
@@ -1220,4 +1164,44 @@ Wire Wire Line
 	1250 2300 1250 2200
 Connection ~ 1250 2300
 NoConn ~ 1150 2200
+Wire Wire Line
+	2050 4850 2300 4850
+$Comp
+L power:GND #PWR017
+U 1 1 5D5A15B6
+P 2000 5250
+F 0 "#PWR017" H 2000 5000 50  0001 C CNN
+F 1 "GND" H 1900 5100 50  0000 C CNN
+F 2 "" H 2000 5250 50  0001 C CNN
+F 3 "" H 2000 5250 50  0001 C CNN
+	1    2000 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5D3F2AE8
+P 2600 5250
+F 0 "#PWR01" H 2600 5000 50  0001 C CNN
+F 1 "GND" H 2650 5100 50  0000 C CNN
+F 2 "" H 2600 5250 50  0001 C CNN
+F 3 "" H 2600 5250 50  0001 C CNN
+	1    2600 5250
+	1    0    0    -1  
+$EndComp
+Connection ~ 2300 4850
+Wire Wire Line
+	2300 4850 2550 4850
+Wire Wire Line
+	2300 4850 2300 5050
+$Comp
+L Device:D_x2_Serial_AKC D3
+U 1 1 5D3E819A
+P 2300 5250
+F 0 "D3" H 2300 5373 50  0000 C CNN
+F 1 "BAV99WT1" H 2300 5464 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" H 2300 5250 50  0001 C CNN
+F 3 "~" H 2300 5250 50  0001 C CNN
+	1    2300 5250
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC

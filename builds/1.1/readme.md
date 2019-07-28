@@ -22,13 +22,12 @@
 * switched to micro USB (from mini USB)
 
 ## TODO: order
-* order 0805 diodes
-* order mmbt3904
 * micro USB
 * 14 MHz oscillators
 
 ## Components
 * all passives are 0805 (~$1)
+* [SBAV99WT1G SC-70 dual diode](https://www.mouser.com/ProductDetail/ON-Semiconductor/SBAV99WT1G?qs=%2Fha2pyFaduhs9dhfVWP8oT%252BsAj5t0ZSYddkb6PuTtd0%3D) 215 mA ($0.29)
 * [14.7456MHz TCXO](https://www.mouser.com/ProductDetail/Fox/FOX924B-147456?qs=sGAEpiMZZMt8oz%2FHeiymADfzZKRiEXclvcmWd5jLzoM%3D) 2.5 PPM, 14.7456MHz ($2.36)
 * [SN74LV8154](https://www.mouser.com/ProductDetail/Texas-Instruments/SN74LV8154PWR?qs=sGAEpiMZZMtdY2G%252BSI3N4aQvQNXOTGN6Ghdjz%252BkScFE%3D) ($0.99) TSSOP-20
 * [FT230XS-R](https://www.mouser.com/ProductDetail/FTDI/FT230XS-R?qs=sGAEpiMZZMtv%252Bwxsgy%2FhiIaF6qCroMVR1i2pEQA5UpU%3D) ($2.04) SSOP-16

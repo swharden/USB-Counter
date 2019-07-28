@@ -156,25 +156,16 @@ $EndComp
 $Comp
 L power:GND #PWR08
 U 1 1 5CDBD712
-P 1250 2650
-F 0 "#PWR08" H 1250 2400 50  0001 C CNN
-F 1 "GND" H 1255 2477 50  0000 C CNN
-F 2 "" H 1250 2650 50  0001 C CNN
-F 3 "" H 1250 2650 50  0001 C CNN
-	1    1250 2650
+P 1250 2350
+F 0 "#PWR08" H 1250 2100 50  0001 C CNN
+F 1 "GND" H 1255 2177 50  0000 C CNN
+F 2 "" H 1250 2350 50  0001 C CNN
+F 3 "" H 1250 2350 50  0001 C CNN
+	1    1250 2350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1150 2200 1150 2250
-Wire Wire Line
-	1150 2550 1150 2600
-Wire Wire Line
-	1250 2600 1250 2200
-Wire Wire Line
-	1150 2600 1250 2600
-Wire Wire Line
-	1250 2600 1250 2650
-Connection ~ 1250 2600
+	1250 2300 1250 2350
 Wire Wire Line
 	2050 2250 2200 2250
 Wire Wire Line
@@ -216,17 +207,6 @@ Wire Wire Line
 Connection ~ 1950 2650
 Wire Wire Line
 	1950 2650 2050 2650
-$Comp
-L Device:R R6
-U 1 1 5CDD40A1
-P 1150 2400
-F 0 "R6" H 1000 2450 50  0000 L CNN
-F 1 "0" H 1000 2350 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1080 2400 50  0001 C CNN
-F 3 "~" H 1150 2400 50  0001 C CNN
-	1    1150 2400
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R R4
 U 1 1 5CE26301
@@ -655,10 +635,10 @@ Wire Wire Line
 	7150 2750 7400 2750
 Wire Notes Line
 	8400 4800 8400 900 
-Text GLabel 1350 2600 2    50   Input ~ 0
+Text GLabel 1350 2300 2    50   Input ~ 0
 GND
 Wire Wire Line
-	1350 2600 1250 2600
+	1350 2300 1250 2300
 Text GLabel 9000 1650 0    50   Input ~ 0
 GND
 Wire Notes Line
@@ -812,50 +792,6 @@ Wire Wire Line
 Wire Wire Line
 	1250 4850 1350 4850
 $Comp
-L Device:D D3
-U 1 1 5D5548F3
-P 2150 5100
-F 0 "D3" V 2196 5021 50  0000 R CNN
-F 1 "D" V 2105 5021 50  0000 R CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2150 5100 50  0001 C CNN
-F 3 "~" H 2150 5100 50  0001 C CNN
-	1    2150 5100
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:D D4
-U 1 1 5D555473
-P 2450 5100
-F 0 "D4" V 2404 5179 50  0000 L CNN
-F 1 "D" V 2495 5179 50  0000 L CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2450 5100 50  0001 C CNN
-F 3 "~" H 2450 5100 50  0001 C CNN
-	1    2450 5100
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR017
-U 1 1 5D5A15B6
-P 2300 5350
-F 0 "#PWR017" H 2300 5100 50  0001 C CNN
-F 1 "GND" H 2305 5177 50  0000 C CNN
-F 2 "" H 2300 5350 50  0001 C CNN
-F 3 "" H 2300 5350 50  0001 C CNN
-	1    2300 5350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2150 5300 2300 5300
-Wire Wire Line
-	2150 5300 2150 5250
-Wire Wire Line
-	2300 5300 2450 5300
-Connection ~ 2300 5300
-Wire Wire Line
-	2300 5350 2300 5300
-Wire Wire Line
-	2450 5300 2450 5250
-$Comp
 L Transistor_BJT:MMBT3904 Q1
 U 1 1 5D352017
 P 3350 4850
@@ -866,15 +802,6 @@ F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 3350 4850 50  000
 	1    3350 4850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2450 4950 2450 4850
-Wire Wire Line
-	2450 4850 2150 4850
-Wire Wire Line
-	2150 4950 2150 4850
-Connection ~ 2150 4850
-Wire Wire Line
-	2150 4850 2050 4850
 $Comp
 L Device:C C3
 U 1 1 5D633781
@@ -886,9 +813,6 @@ F 3 "~" H 2700 4850 50  0001 C CNN
 	1    2700 4850
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	2550 4850 2450 4850
-Connection ~ 2450 4850
 Wire Wire Line
 	3050 4550 2950 4550
 Wire Wire Line
@@ -1236,4 +1160,48 @@ F 3 "~" H 10050 3450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1550 1600 1650 1600
+Wire Wire Line
+	1250 2300 1250 2200
+Connection ~ 1250 2300
+NoConn ~ 1150 2200
+Wire Wire Line
+	2050 4850 2300 4850
+$Comp
+L power:GND #PWR017
+U 1 1 5D5A15B6
+P 2000 5250
+F 0 "#PWR017" H 2000 5000 50  0001 C CNN
+F 1 "GND" H 1900 5100 50  0000 C CNN
+F 2 "" H 2000 5250 50  0001 C CNN
+F 3 "" H 2000 5250 50  0001 C CNN
+	1    2000 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5D3F2AE8
+P 2600 5250
+F 0 "#PWR01" H 2600 5000 50  0001 C CNN
+F 1 "GND" H 2650 5100 50  0000 C CNN
+F 2 "" H 2600 5250 50  0001 C CNN
+F 3 "" H 2600 5250 50  0001 C CNN
+	1    2600 5250
+	1    0    0    -1  
+$EndComp
+Connection ~ 2300 4850
+Wire Wire Line
+	2300 4850 2550 4850
+Wire Wire Line
+	2300 4850 2300 5050
+$Comp
+L Device:D_x2_Serial_AKC D3
+U 1 1 5D3E819A
+P 2300 5250
+F 0 "D3" H 2300 5373 50  0000 C CNN
+F 1 "BAV99WT1" H 2300 5464 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SC-70-8_Handsoldering" H 2300 5250 50  0001 C CNN
+F 3 "~" H 2300 5250 50  0001 C CNN
+	1    2300 5250
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC

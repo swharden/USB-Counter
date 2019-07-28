@@ -19,6 +19,7 @@
   * no longer accepts external 10MHz reference
   * may still accept external gate
 * added screw holes
+  * they're floating (not grounded) - should they be grounded?
 * switched to micro USB (from mini USB)
 
 ## Components

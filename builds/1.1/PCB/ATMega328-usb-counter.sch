@@ -156,25 +156,16 @@ $EndComp
 $Comp
 L power:GND #PWR08
 U 1 1 5CDBD712
-P 1250 2650
-F 0 "#PWR08" H 1250 2400 50  0001 C CNN
-F 1 "GND" H 1255 2477 50  0000 C CNN
-F 2 "" H 1250 2650 50  0001 C CNN
-F 3 "" H 1250 2650 50  0001 C CNN
-	1    1250 2650
+P 1250 2350
+F 0 "#PWR08" H 1250 2100 50  0001 C CNN
+F 1 "GND" H 1255 2177 50  0000 C CNN
+F 2 "" H 1250 2350 50  0001 C CNN
+F 3 "" H 1250 2350 50  0001 C CNN
+	1    1250 2350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1150 2200 1150 2250
-Wire Wire Line
-	1150 2550 1150 2600
-Wire Wire Line
-	1250 2600 1250 2200
-Wire Wire Line
-	1150 2600 1250 2600
-Wire Wire Line
-	1250 2600 1250 2650
-Connection ~ 1250 2600
+	1250 2300 1250 2350
 Wire Wire Line
 	2050 2250 2200 2250
 Wire Wire Line
@@ -216,17 +207,6 @@ Wire Wire Line
 Connection ~ 1950 2650
 Wire Wire Line
 	1950 2650 2050 2650
-$Comp
-L Device:R R6
-U 1 1 5CDD40A1
-P 1150 2400
-F 0 "R6" H 1000 2450 50  0000 L CNN
-F 1 "0" H 1000 2350 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1080 2400 50  0001 C CNN
-F 3 "~" H 1150 2400 50  0001 C CNN
-	1    1150 2400
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R R4
 U 1 1 5CE26301
@@ -328,15 +308,10 @@ Wire Wire Line
 	2750 1300 2700 1300
 Wire Wire Line
 	2750 1350 2750 1300
-Wire Wire Line
-	1600 1600 1550 1600
-Connection ~ 1600 1600
 Text GLabel 2050 1600 2    50   Input ~ 0
 5V
 Wire Wire Line
 	1950 1600 2000 1600
-Wire Wire Line
-	1650 1600 1600 1600
 $Comp
 L power:GND #PWR02
 U 1 1 5CDC8BC0
@@ -558,17 +533,6 @@ Wire Wire Line
 	6650 3900 6750 3900
 Wire Wire Line
 	6750 4000 6650 4000
-$Comp
-L Connector:Conn_01x02_Male J1
-U 1 1 5D39A20E
-P 1200 1050
-F 0 "J1" H 1100 1050 50  0000 R CNN
-F 1 "power" H 1150 950 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1200 1050 50  0001 C CNN
-F 3 "~" H 1200 1050 50  0001 C CNN
-	1    1200 1050
-	1    0    0    -1  
-$EndComp
 Text GLabel 7350 1950 2    50   Input ~ 0
 GATE
 Wire Wire Line
@@ -586,21 +550,6 @@ F 3 "" H 8100 1850 50  0001 C CNN
 	1    8100 1850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1600 1150 1400 1150
-$Comp
-L power:GND #PWR01
-U 1 1 5D23D013
-P 1500 1050
-F 0 "#PWR01" H 1500 800 50  0001 C CNN
-F 1 "GND" V 1600 950 50  0000 C CNN
-F 2 "" H 1500 1050 50  0001 C CNN
-F 3 "" H 1500 1050 50  0001 C CNN
-	1    1500 1050
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	1500 1050 1400 1050
 Text GLabel 6750 1700 2    50   Input ~ 0
 PCCTS
 Text GLabel 6750 3400 2    50   Input ~ 0
@@ -631,8 +580,6 @@ F 3 "" H 7800 3050 50  0001 C CNN
 	1    7800 3050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1600 1150 1600 1600
 Wire Wire Line
 	2050 1300 2000 1300
 Wire Wire Line
@@ -688,10 +635,10 @@ Wire Wire Line
 	7150 2750 7400 2750
 Wire Notes Line
 	8400 4800 8400 900 
-Text GLabel 1350 2600 2    50   Input ~ 0
+Text GLabel 1350 2300 2    50   Input ~ 0
 GND
 Wire Wire Line
-	1350 2600 1250 2600
+	1350 2300 1250 2300
 Text GLabel 9000 1650 0    50   Input ~ 0
 GND
 Wire Notes Line
@@ -1256,4 +1203,21 @@ F 3 "~" H 10050 3150 50  0001 C CNN
 	1    10050 3150
 	1    0    0    -1  
 $EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5D3E5B2C
+P 10050 3450
+F 0 "H4" H 10150 3496 50  0000 L CNN
+F 1 "MountingHole" H 10150 3405 50  0000 L CNN
+F 2 "MountingHole:MountingHole_4.3mm_M4_Pad_Via" H 10050 3450 50  0001 C CNN
+F 3 "~" H 10050 3450 50  0001 C CNN
+	1    10050 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 1600 1650 1600
+Wire Wire Line
+	1250 2300 1250 2200
+Connection ~ 1250 2300
+NoConn ~ 1150 2200
 $EndSCHEMATC

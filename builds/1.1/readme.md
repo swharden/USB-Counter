@@ -1,9 +1,9 @@
 # USB Frequency Counter (rev 1.1)
 
-![](pcb-render.png)
+![](pcb-rndr.png)
 
 ### PCB Design
-![](pcb-design.png)
+![](pcb-dsn.png)
 
 ### Schematic
 ![](schematic.png)

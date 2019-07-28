@@ -1,4 +1,4 @@
-# USB Frequency Counter
+# USB Frequency Counter (rev 1.0)
 
 This project contains the design and microcontroller code for a USB logging frequency counter. The entire project is open source (open software / open hardware). This project developed from a discussion that started [here](https://github.com/swharden/AVR-projects/issues/1).
 

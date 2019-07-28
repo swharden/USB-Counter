@@ -8,7 +8,7 @@
 ### Schematic
 ![](schematic.png)
 
-## Changes from 1.0
+## Changes from rev 1.0
 * improved RF amplifier design
 * alternate path to bypass RF amplifier
 * corrected counter pin connections
@@ -20,10 +20,6 @@
   * may still accept external gate
 * added screw holes
 * switched to micro USB (from mini USB)
-
-## TODO: order
-* micro USB
-* 14 MHz oscillators
 
 ## Components
 * all passives are 0805 (~$1)

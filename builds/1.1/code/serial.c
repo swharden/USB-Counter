@@ -36,6 +36,11 @@ void SerialSendComma()
     SerialSend(',');
 }
 
+void SerialSendPeriod()
+{
+    SerialSend('.');
+}
+
 void SerialSendBreak()
 {
     SerialSend(10); // new line
@@ -57,8 +62,18 @@ void SerialSendString(const char *s)
 void SerialSend_UINT32(uint32_t val)
 {
     // send a 32-bit (4-byte) long as ASCII
-    char preVal = ' ';
     uint32_t divby = 1000000000;
+    while (divby >= 1)
+    {
+        SerialSend('0' + val / divby);
+        val -= (val / divby) * divby;
+        divby /= 10;
+    }
+}
+
+void SerialSend_intThreeDigit(int val)
+{
+    int divby = 100;
     while (divby >= 1)
     {
         SerialSend('0' + val / divby);

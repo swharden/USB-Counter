@@ -36,16 +36,20 @@ int main(void)
 	uint32_t countDiff;
 	for (;;)
 	{
+
 		if (gateCycled)
 		{
 			PORTB |= (1 << PB1);
 
 			countNow = ReadCount();
-			SerialSend_UINT32(countNow);
+			countDiff = countNow - countLast;
 
-			//countDiff = countNow - countLast;
-			//SerialSend_UINT32(countDiff);
-
+			SerialSend_intThreeDigit(seconds);
+			SerialSendPeriod();
+			SerialSend_intThreeDigit(milliseconds);
+			SerialSendComma();
+			//SerialSend_UINT32(countNow);
+			SerialSend_UINT32(countDiff);
 			SerialSendBreak();
 
 			countLast = countNow;

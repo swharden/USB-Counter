@@ -17,12 +17,23 @@ void TimerInitialize1Hz()
 }
 
 volatile char gateCycled = 0;
+volatile int seconds = 0;
+volatile int milliseconds = 0;
 
 ISR(TIMER1_OVF_vect)
 {
 	DDRB |= (1 << PB2); // set gate as output
+
+	PORTB &= ~_BV(PB2); // cycle the gate
 	PORTB |= _BV(PB2);
-	PORTB &= ~_BV(PB2);
+
+	milliseconds += 10;
+	if (milliseconds >= 1000)
+	{
+		milliseconds = 0;
+		seconds += 1;
+		if (seconds >= 1000)
+			seconds = 0;
+	}
 	gateCycled = 1;
-	overflows = 0;
 }

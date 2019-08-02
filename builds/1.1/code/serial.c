@@ -1,6 +1,6 @@
 #include <avr/io.h>
 
-#define USART_BAUDRATE 1200 // 0.0% error rate at 10MHz clock
+#define USART_BAUDRATE 115200
 #define UBRR_VALUE (((F_CPU / (USART_BAUDRATE * 16UL))) - 1)
 
 void SerialInitialize()

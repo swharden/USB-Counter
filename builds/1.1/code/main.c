@@ -1,4 +1,4 @@
-#define F_CPU 10000000L
+#define F_CPU 14745600L
 #include <avr/io.h>
 #include <util/delay.h>
 #include <avr/interrupt.h>
@@ -41,9 +41,11 @@ int main(void)
 			PORTB |= (1 << PB1);
 
 			countNow = ReadCount();
-			countDiff = countNow - countLast;
+			SerialSend_UINT32(countNow);
 
-			SerialSend_UINT32(countDiff);
+			//countDiff = countNow - countLast;
+			//SerialSend_UINT32(countDiff);
+
 			SerialSendBreak();
 
 			countLast = countNow;

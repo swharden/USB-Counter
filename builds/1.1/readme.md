@@ -35,3 +35,10 @@ I ordered this PCB on 2019-07-28
 * [micro-USB jack](https://www.mouser.com/ProductDetail/Hirose-Connector/ZX62D-B-5PA830?qs=sGAEpiMZZMulM8LPOQ%252Byk6r3VmhUEyMLT8hu1C1GYL85FtczwhvFwQ%3D%3D) ($0.70)
 * [SMA connector](https://www.mouser.com/ProductDetail/LPRS/SMA-CONNECTOR?qs=sGAEpiMZZMuLQf%252BEuFsOrkd7M7rmHNHidLMZ%2Ftb%252B0T1YCJLScw0qLA%3D%3D) ($1.08)
 * [SPI-driven 8-digit 7-segment display module](https://www.amazon.com/dp/B07CL2YNJQ) ($13 for 4)
+
+
+## Build Notes
+* didnt have 27 ohm resistors. used 22 ohm.
+* I used a 500mW rated R15
+* make hand solder version of usb
+* make oscillator fit less awkwardly

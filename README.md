@@ -2,7 +2,7 @@
 
 This project contains the design files and notes for a USB counter. This device can measure RF (when the small signal amplifier front-end is populated) or TTL pulses (0-3.3V).
 
-![](/builds/1.1/photos/curved.jpg)
+![](/builds/1.1/photos/curved2.jpg)
 
 ## Design Goals
 

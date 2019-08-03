@@ -45,3 +45,5 @@ I ordered this PCB on 2019-07-28
 
 ![](photos/DSC_0098.JPG)
 ![](photos/curved.jpg)
+![](photos/DSC_0100.JPG)
+![](photos/curved2.jpg)

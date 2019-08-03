@@ -42,3 +42,6 @@ I ordered this PCB on 2019-07-28
 * I used a 500mW rated R15
 * make hand solder version of usb
 * make oscillator fit less awkwardly
+
+![](photos/DSC_0098.JPG)
+![](photos/curved.jpg)

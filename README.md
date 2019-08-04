@@ -25,12 +25,8 @@ The microcontroller is capable of generating gate cycles in software. Precision 
 
 ### Design and Build Notes
 
-* [Revision 1.0](/builds/1.0) was built on 2019-07-26
-* [Revision 1.1](/builds/1.1) was built on 2019-08-03
-
-Schematic | PCB Design | PCB Render
----|---|---
-![](/builds/1.1/schematic.png) | ![](/builds/1.1/pcb-dsn.png) | ![](/builds/1.1/pcb-rndr.png)
+* [Revision 1.0 - schematics and PCB design](/builds/1.0) - first tested 2019-07-26
+* [Revision 1.1 - schematics and PCB design](/builds/1.1) - first tested 2019-08-03
 
 ### About
 

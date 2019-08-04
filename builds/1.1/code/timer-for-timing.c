@@ -1,6 +1,6 @@
 /* Code here relates to use of 16-bit timer for timing purposes */
 
-volatile int overflows;
+volatile int millisecPerUpdate;
 
 void TimerInitialize1Hz()
 {
@@ -8,6 +8,7 @@ void TimerInitialize1Hz()
 	// prescaled by 1024 that's 14,400 ticks/second
 
 	int updatesPerSecond = 1;
+	millisecPerUpdate = 1000 / updatesPerSecond;
 
 	TCCR1B |= _BV(WGM13);				 // mode 8 (ICR1 top)
 	TCCR1B |= _BV(CS12) | _BV(CS10);	 // prescale by 1024
@@ -26,7 +27,7 @@ ISR(TIMER1_OVF_vect)
 	PORTB &= ~_BV(PB1); // cycle the gate
 	PORTB |= _BV(PB1);
 
-	milliseconds += 10;
+	milliseconds += millisecPerUpdate;
 	if (milliseconds >= 1000)
 	{
 		milliseconds = 0;

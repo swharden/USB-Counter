@@ -2,12 +2,12 @@
 
 volatile int millisecPerUpdate;
 
-void TimerInitialize1Hz()
+void TimerInitialize()
 {
 	// The CPU clock produces 14,745,600 ticks/second
 	// prescaled by 1024 that's 14,400 ticks/second
 
-	int updatesPerSecond = 1;
+	int updatesPerSecond = 100;
 	millisecPerUpdate = 1000 / updatesPerSecond;
 
 	TCCR1B |= _BV(WGM13);				 // mode 8 (ICR1 top)

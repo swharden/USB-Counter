@@ -13,12 +13,13 @@ int main(void)
 
 	// WARNING: code hangs if no USB port is connected.
 
-	SpiInitialize();
+	//SpiInitialize();
 
 	SerialInitialize();
-	TimerInitialize1Hz();
+	TimerInitialize();
 
 	SendStartupMessage();
+
 	uint32_t countLast;
 	uint32_t countNow;
 	uint32_t countDiff;
@@ -40,8 +41,8 @@ int main(void)
 			countLast = countNow;
 			gateCycled = 0;
 
-			DisplayInitialize();
-			DisplayNumber(countDiff);
+			//DisplayInitialize();
+			//DisplayNumber(countDiff);
 		}
 	}
 }

@@ -40,6 +40,7 @@ I ordered this PCB on 2019-07-28
 ## Build Notes
 * didnt have 27 ohm resistors. used 22 ohm.
 * I used a 500mW rated R15
+* I used a 500mW rated R13
 * make hand solder version of usb
 * make oscillator fit less awkwardly
 

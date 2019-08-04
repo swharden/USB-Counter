@@ -7,15 +7,6 @@
 #include "counter_74LV8154.c"
 #include "timer1hz.c"
 
-void LEDblink()
-{
-	DDRB |= (1 << PB1); // status LED output
-	PORTB |= (1 << PB1);
-	_delay_ms(50);
-	PORTB &= ~(1 << PB1);
-	_delay_ms(50);
-}
-
 void SendStartupMessage()
 {
 
@@ -39,8 +30,6 @@ int main(void)
 
 		if (gateCycled)
 		{
-			PORTB |= (1 << PB1);
-
 			countNow = ReadCount();
 			countDiff = countNow - countLast;
 
@@ -54,8 +43,6 @@ int main(void)
 
 			countLast = countNow;
 			gateCycled = 0;
-			
-			PORTB &= ~(1 << PB1);
 		}
 	}
 }

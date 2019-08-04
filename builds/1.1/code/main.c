@@ -5,19 +5,15 @@
 
 #include "serial.c"
 #include "counter_74LV8154.c"
+#include "display_max7219_7seg.c"
 #include "timer1hz.c"
-
-void SendStartupMessage()
-{
-
-	SerialSendBreak();
-	SerialSendBreak();
-	SerialSendString("USB Counter - www.SWHarden.com");
-	SerialSendBreak();
-}
 
 int main(void)
 {
+
+	SpiInitialize();
+	DisplayInitialize();
+
 	SerialInitialize();
 	TimerInitialize1Hz();
 
@@ -43,6 +39,8 @@ int main(void)
 
 			countLast = countNow;
 			gateCycled = 0;
+			
+			DisplayNumber(countDiff);
 		}
 	}
 }

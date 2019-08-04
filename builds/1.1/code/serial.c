@@ -81,3 +81,12 @@ void SerialSend_intThreeDigit(int val)
         divby /= 10;
     }
 }
+
+void SendStartupMessage()
+{
+
+	SerialSendBreak();
+	SerialSendBreak();
+	SerialSendString("USB Counter - www.SWHarden.com");
+	SerialSendBreak();
+}

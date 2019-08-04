@@ -1,6 +1,7 @@
 # USB Frequency Counter (rev 1.1)
 
-I ordered this PCB on 2019-07-28
+* I ordered this PCB on 2019-07-28
+* I built this device on 2019-08-03
 
 ![](pcb-rndr.png)
 

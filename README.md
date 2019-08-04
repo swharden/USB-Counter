@@ -8,14 +8,13 @@ This project contains the design files and notes for a USB counter. By populatin
 
 In addition to serial output, this counter can optionally interface a SPI-driven 7-segment display (based on a MAX7219). These display modules are about [$4 on Amazon](https://www.amazon.com/s?k=max7219+segment) and allow this counter to be used without a computer. Note that the LED display and USB output can both be used at the same time.
 
-![](/builds/1.1/photos/DSC_0132.JPG)
+![](/builds/1.1/photos/DSC_0132.jpg)
 
 ### USB (Serial) Output
 
 When plugged in to a USB port the counter looks like a serial device. It continuously transmits the count (at 115200 baud) at an update rate which can be customized (commonly 1Hz, 10Hz, and 100Hz.) The output is two numbers: time (in seconds) and the count between the last update and this one. In this example it is measuring a radio frequency signal near 10.139977 MHz
 
 ![](/graphics/2019-08-04-output.png)
-
 
 ### Precision Frequency Measurement
 

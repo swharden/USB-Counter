@@ -18,3 +18,5 @@ This project contains the design files and notes for a USB counter. This device 
 
 * [Revision 1.0](/builds/1.0) was built on 2019-07-26
 * [Revision 1.1](/builds/1.1) was built on 2019-08-03
+
+![](/builds/1.1/photos/DSC_0106.JPG)

@@ -28,6 +28,8 @@ The microcontroller is capable of generating gate cycles in software. Precision 
 * [Revision 1.0](/builds/1.0) was built on 2019-07-26
 * [Revision 1.1](/builds/1.1) was built on 2019-08-03
 
+![](/builds/1.1/schematic.png)
+
 ### About
 
 This project was created by [Harden Technologies, LLC](http://tech.swharden.com). To inquire about the development special features or customized versions of this hardware or software, contact the author at [SWHarden@gmail.com](mailto:swharden@gmail.com).

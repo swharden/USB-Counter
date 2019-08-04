@@ -44,6 +44,7 @@
 * I used a 500mW rated R13
 * make hand solder version of usb
 * make oscillator fit less awkwardly
+* Add a 7805 so 12V can be applied or USB. Use a 78L33 (not the reg on the FTDI chip) to power everything else.
 * This device doesn't work when plugged into a wall USB cord (power only, no data). It seems an active USB connection is required to cause the 3.3V regulator (built into the FTDI chip) to deliver power. The next revision should use a discrete 3.3V regulator.
 * For a standalone (LED) device no USB connection is needed. Make a version that accepts 12V and displays the result on the LED. Make the optional external gate easy to access. Break-out the TX pin so PC logging is still very easy.
 

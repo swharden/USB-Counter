@@ -44,6 +44,7 @@
 * I used a 500mW rated R13
 * make hand solder version of usb
 * make oscillator fit less awkwardly
+* This device doesn't work when plugged into a wall USB cord (power only, no data). It seems an active USB connection is required to cause the 3.3V regulator (built into the FTDI chip) to deliver power. The next revision should use a discrete 3.3V regulator.
 
 ![](photos/DSC_0098.JPG)
 ![](photos/curved.jpg)

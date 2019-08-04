@@ -11,6 +11,8 @@
 int main(void)
 {
 
+	// WARNING: code hangs if no USB port is connected.
+
 	SpiInitialize();
 
 	SerialInitialize();

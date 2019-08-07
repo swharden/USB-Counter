@@ -1,0 +1,1 @@
+avrdude -c usbtiny -p m328p -U flash:w:"main.hex":a -F

@@ -1,3 +1,3 @@
-> ⚠️ WARNING: This design is still a work in progress
+![](3d.png)
 
 ![](schematic.png)

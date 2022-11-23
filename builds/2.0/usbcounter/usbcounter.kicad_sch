@@ -4088,7 +4088,7 @@
     (uuid e192ab3c-af17-4fd1-8347-4938804d358d)
     (property "Reference" "R1" (id 0) (at 35.56 127.635 0))
     (property "Value" "50" (id 1) (at 35.56 129.54 0))
-    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (id 2) (at 34.798 128.27 90)
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (id 2) (at 34.798 128.27 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 33.02 128.27 0)
@@ -4519,7 +4519,7 @@
       (reference "Q1") (unit 1) (value "MMBT2222A") (footprint "Package_TO_SOT_SMD:SOT-23")
     )
     (path "/e192ab3c-af17-4fd1-8347-4938804d358d"
-      (reference "R1") (unit 1) (value "50") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
+      (reference "R1") (unit 1) (value "50") (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal")
     )
     (path "/5dd5aa12-5573-447f-9aa7-a63ab5147207"
       (reference "R2") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")

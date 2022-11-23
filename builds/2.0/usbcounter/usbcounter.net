@@ -1,7 +1,7 @@
 (export (version "E")
   (design
     (source "C:\\Users\\scott\\Documents\\GitHub\\USB-Counter\\builds\\2.0\\usbcounter\\usbcounter.kicad_sch")
-    (date "11/22/2022 10:01:47 PM")
+    (date "11/22/2022 10:23:31 PM")
     (tool "Eeschema (6.0.9)")
     (sheet (number "1") (name "/") (tstamps "/")
       (title_block
@@ -273,7 +273,7 @@
       (tstamps "98497df6-bfd8-4e86-932f-da95a6b00141"))
     (comp (ref "R1")
       (value "50")
-      (footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder")
+      (footprint "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal")
       (libsource (lib "Device") (part "R") (description "Resistor"))
       (property (name "Sheetname") (value ""))
       (property (name "Sheetfile") (value "usbcounter.kicad_sch"))

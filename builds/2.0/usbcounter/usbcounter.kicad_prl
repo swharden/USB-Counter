@@ -3,7 +3,9 @@
     "active_layer": 31,
     "active_layer_preset": "",
     "auto_track_width": false,
-    "hidden_nets": [],
+    "hidden_nets": [
+      "VCC"
+    ],
     "high_contrast_mode": 0,
     "net_color_mode": 1,
     "opacity": {
@@ -63,7 +65,7 @@
       36
     ],
     "visible_layers": "ffdffff_ffffffff",
-    "zone_display_mode": 0
+    "zone_display_mode": 1
   },
   "meta": {
     "filename": "usbcounter.kicad_prl",

@@ -10,3 +10,5 @@
 * favor USBC port
 * dot for oscillator
 * screw holes are too small
+* pins need labels
+* MCU programming pins are wrong

@@ -9,3 +9,4 @@
 * ICs need dot near pin 1
 * favor USBC port
 * dot for oscillator
+* screw holes are too small

@@ -8,3 +8,4 @@
 * PCB labels for R5 and C2 are reversed
 * ICs need dot near pin 1
 * favor USBC port
+* dot for oscillator

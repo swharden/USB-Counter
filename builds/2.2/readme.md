@@ -7,6 +7,10 @@
 * What makes this unique is no-cycle-lost counting
 * Ability to accept a 10 MHz lab reference clock is also a big win
 
+## Schematic
+
+![](schematic.png)
+
 ## Alternative Frontend Designs
 
 ### TLV3501 RF Comparator

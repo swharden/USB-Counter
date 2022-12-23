@@ -17,6 +17,7 @@
 * Move the board ID under one of the ICs
 * Consider horizontally mounted headers and SMA connector to facilitate stacking
 * Clamp diodes should be downstream of the input decoupling decapacitors
+* External 10MHz clock is going into the wrong pin (32 kHz clock). Clock should go to PA0/PA1 and USART use alternate pins PD4/PD5
 
 ## Schematic
 

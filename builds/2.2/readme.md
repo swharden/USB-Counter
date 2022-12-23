@@ -7,6 +7,10 @@
 * What makes this unique is no-cycle-lost counting
 * Ability to accept a 10 MHz lab reference clock is also a big win
 
+## Build notes
+* LED resistors should be 1K
+* Capacitors on USB line should be 47pF
+
 ## Schematic
 
 ![](schematic.png)

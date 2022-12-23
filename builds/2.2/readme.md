@@ -10,6 +10,7 @@
 ## Build notes
 * LED resistors should be 1K
 * Capacitors on USB line should be 47pF
+* LJCPCB blue silkscreen is ugly and doesn't hold up to heat as well as green
 
 ## Schematic
 

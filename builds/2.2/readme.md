@@ -16,6 +16,7 @@
 * It's annoying to keep rotating the board when hand assembling so lay-out passives horizontally
 * Move the board ID under one of the ICs
 * Consider horizontally mounted headers and SMA connector to facilitate stacking
+* Clamp diodes should be downstream of the input decoupling decapacitors
 
 ## Schematic
 

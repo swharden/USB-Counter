@@ -8,7 +8,8 @@
 * Ability to accept a 10 MHz lab reference clock is also a big win
 
 ## Build notes
-* LED resistors should be 1K
+* Red and blue LEDs need 1K resistors
+* Green LEDs need 47k resistors
 * Capacitors on USB line should be 47pF
 * LJCPCB blue silkscreen is ugly and doesn't hold up to heat as well as green
 * For the crystal oscillator indicate where the dot goes

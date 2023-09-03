@@ -1,0 +1,275 @@
+
+UsbCounter.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000000a  00806000  000001a8  0000021c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000001a8  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  00000226  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000258  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000070  00000000  00000000  00000294  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   0000286f  00000000  00000000  00000304  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 0000207e  00000000  00000000  00002b73  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000004c7  00000000  00000000  00004bf1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000000d8  00000000  00000000  000050b8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00001347  00000000  00000000  00005190  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000000c2  00000000  00000000  000064d7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000060  00000000  00000000  00006599  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 48 00 	jmp	0x90	; 0x90 <__ctors_end>
+   4:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+   8:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+   c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  10:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  14:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  18:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  1c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  20:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  24:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  28:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  2c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  30:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  34:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  38:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  3c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  40:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  44:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  48:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  4c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  50:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  54:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  58:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  5c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  60:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  64:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  68:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  6c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  70:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  74:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  78:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  7c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  80:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  84:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  88:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  8c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+
+00000090 <__ctors_end>:
+  90:	11 24       	eor	r1, r1
+  92:	1f be       	out	0x3f, r1	; 63
+  94:	cf ef       	ldi	r28, 0xFF	; 255
+  96:	cd bf       	out	0x3d, r28	; 61
+  98:	df e7       	ldi	r29, 0x7F	; 127
+  9a:	de bf       	out	0x3e, r29	; 62
+
+0000009c <__do_copy_data>:
+  9c:	10 e6       	ldi	r17, 0x60	; 96
+  9e:	a0 e0       	ldi	r26, 0x00	; 0
+  a0:	b0 e6       	ldi	r27, 0x60	; 96
+  a2:	e8 ea       	ldi	r30, 0xA8	; 168
+  a4:	f1 e0       	ldi	r31, 0x01	; 1
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x10>
+  a8:	05 90       	lpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	aa 30       	cpi	r26, 0x0A	; 10
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0xc>
+  b2:	0e 94 af 00 	call	0x15e	; 0x15e <main>
+  b6:	0c 94 d2 00 	jmp	0x1a4	; 0x1a4 <_exit>
+
+000000ba <__bad_interrupt>:
+  ba:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000be <serial_send_char>:
+void status_led_toggle(){
+	PORTD.OUT = ~PORTD.OUT;
+}
+
+void status_led_off(){
+	PORTD.OUT = 255;
+  be:	90 91 04 08 	lds	r25, 0x0804	; 0x800804 <__TEXT_REGION_LENGTH__+0x7f0804>
+  c2:	95 ff       	sbrs	r25, 5
+  c4:	fc cf       	rjmp	.-8      	; 0xbe <serial_send_char>
+  c6:	80 93 02 08 	sts	0x0802, r24	; 0x800802 <__TEXT_REGION_LENGTH__+0x7f0802>
+  ca:	08 95       	ret
+
+000000cc <ccp_write>:
+  cc:	28 ed       	ldi	r18, 0xD8	; 216
+  ce:	24 bf       	out	0x34, r18	; 52
+  d0:	fc 01       	movw	r30, r24
+  d2:	60 83       	st	Z, r22
+  d4:	08 95       	ret
+
+000000d6 <clock_setup_internal>:
+  d6:	60 e8       	ldi	r22, 0x80	; 128
+  d8:	80 e6       	ldi	r24, 0x60	; 96
+  da:	90 e0       	ldi	r25, 0x00	; 0
+  dc:	0e 94 66 00 	call	0xcc	; 0xcc <ccp_write>
+  e0:	61 e0       	ldi	r22, 0x01	; 1
+  e2:	81 e6       	ldi	r24, 0x61	; 97
+  e4:	90 e0       	ldi	r25, 0x00	; 0
+  e6:	0e 94 66 00 	call	0xcc	; 0xcc <ccp_write>
+  ea:	60 e2       	ldi	r22, 0x20	; 32
+  ec:	88 e6       	ldi	r24, 0x68	; 104
+  ee:	90 e0       	ldi	r25, 0x00	; 0
+  f0:	0e 94 66 00 	call	0xcc	; 0xcc <ccp_write>
+  f4:	08 95       	ret
+
+000000f6 <status_led_setup>:
+  f6:	8f ef       	ldi	r24, 0xFF	; 255
+  f8:	80 93 60 04 	sts	0x0460, r24	; 0x800460 <__TEXT_REGION_LENGTH__+0x7f0460>
+  fc:	08 95       	ret
+
+000000fe <status_led_toggle>:
+  fe:	e0 e6       	ldi	r30, 0x60	; 96
+ 100:	f4 e0       	ldi	r31, 0x04	; 4
+ 102:	84 81       	ldd	r24, Z+4	; 0x04
+ 104:	80 95       	com	r24
+ 106:	84 83       	std	Z+4, r24	; 0x04
+ 108:	08 95       	ret
+
+0000010a <serial_setup>:
+}
+
+void serial_setup(void)
+{
+	PORTA.DIR = 255;
+ 10a:	8f ef       	ldi	r24, 0xFF	; 255
+ 10c:	80 93 00 04 	sts	0x0400, r24	; 0x800400 <__TEXT_REGION_LENGTH__+0x7f0400>
+	//PORTMUX_USARTROUTEA = PORTMUX_USART0_ALT1_gc;
+	USART0.BAUD = (uint16_t)USART0_BAUD_RATE(9600);
+ 110:	e0 e0       	ldi	r30, 0x00	; 0
+ 112:	f8 e0       	ldi	r31, 0x08	; 8
+ 114:	87 e4       	ldi	r24, 0x47	; 71
+ 116:	90 e1       	ldi	r25, 0x10	; 16
+ 118:	80 87       	std	Z+8, r24	; 0x08
+ 11a:	91 87       	std	Z+9, r25	; 0x09
+	USART0.CTRLB = USART_RXEN_bm | USART_TXEN_bm;
+ 11c:	80 ec       	ldi	r24, 0xC0	; 192
+ 11e:	86 83       	std	Z+6, r24	; 0x06
+ 120:	08 95       	ret
+
+00000122 <serial_send_string>:
+	while (!(USART0.STATUS & USART_DREIF_bm)) {;}
+	USART0.TXDATAL = c;
+}
+
+void serial_send_string(char *str)
+{
+ 122:	0f 93       	push	r16
+ 124:	1f 93       	push	r17
+ 126:	cf 93       	push	r28
+ 128:	df 93       	push	r29
+ 12a:	8c 01       	movw	r16, r24
+	for(size_t i = 0; i < strlen(str); i++)
+ 12c:	c0 e0       	ldi	r28, 0x00	; 0
+ 12e:	d0 e0       	ldi	r29, 0x00	; 0
+ 130:	07 c0       	rjmp	.+14     	; 0x140 <serial_send_string+0x1e>
+	{
+		serial_send_char(str[i]);
+ 132:	f8 01       	movw	r30, r16
+ 134:	ec 0f       	add	r30, r28
+ 136:	fd 1f       	adc	r31, r29
+ 138:	80 81       	ld	r24, Z
+ 13a:	0e 94 5f 00 	call	0xbe	; 0xbe <serial_send_char>
+	USART0.TXDATAL = c;
+}
+
+void serial_send_string(char *str)
+{
+	for(size_t i = 0; i < strlen(str); i++)
+ 13e:	21 96       	adiw	r28, 0x01	; 1
+ 140:	f8 01       	movw	r30, r16
+ 142:	01 90       	ld	r0, Z+
+ 144:	00 20       	and	r0, r0
+ 146:	e9 f7       	brne	.-6      	; 0x142 <serial_send_string+0x20>
+ 148:	31 97       	sbiw	r30, 0x01	; 1
+ 14a:	e0 1b       	sub	r30, r16
+ 14c:	f1 0b       	sbc	r31, r17
+ 14e:	ce 17       	cp	r28, r30
+ 150:	df 07       	cpc	r29, r31
+ 152:	78 f3       	brcs	.-34     	; 0x132 <serial_send_string+0x10>
+	{
+		serial_send_char(str[i]);
+	}
+}
+ 154:	df 91       	pop	r29
+ 156:	cf 91       	pop	r28
+ 158:	1f 91       	pop	r17
+ 15a:	0f 91       	pop	r16
+ 15c:	08 95       	ret
+
+0000015e <main>:
+
+int main(void)
+{
+	clock_setup_internal();
+ 15e:	0e 94 6b 00 	call	0xd6	; 0xd6 <clock_setup_internal>
+	status_led_setup();
+ 162:	0e 94 7b 00 	call	0xf6	; 0xf6 <status_led_setup>
+	serial_setup();
+ 166:	0e 94 85 00 	call	0x10a	; 0x10a <serial_setup>
+	
+	char count = 0;
+ 16a:	c0 e0       	ldi	r28, 0x00	; 0
+	
+	while (1)
+	{
+		status_led_toggle();
+ 16c:	0e 94 7f 00 	call	0xfe	; 0xfe <status_led_toggle>
+		serial_send_string("test ");
+ 170:	80 e0       	ldi	r24, 0x00	; 0
+ 172:	90 e6       	ldi	r25, 0x60	; 96
+ 174:	0e 94 91 00 	call	0x122	; 0x122 <serial_send_string>
+		serial_send_char('0' + count);
+ 178:	80 e3       	ldi	r24, 0x30	; 48
+ 17a:	8c 0f       	add	r24, r28
+ 17c:	0e 94 5f 00 	call	0xbe	; 0xbe <serial_send_char>
+		serial_send_string("\r\n");
+ 180:	86 e0       	ldi	r24, 0x06	; 6
+ 182:	90 e6       	ldi	r25, 0x60	; 96
+ 184:	0e 94 91 00 	call	0x122	; 0x122 <serial_send_string>
+		
+		count += 1;
+ 188:	cf 5f       	subi	r28, 0xFF	; 255
+		if (count >= 10){
+ 18a:	ca 30       	cpi	r28, 0x0A	; 10
+ 18c:	08 f0       	brcs	.+2      	; 0x190 <main+0x32>
+			count = 0;
+ 18e:	c0 e0       	ldi	r28, 0x00	; 0
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 190:	2f e7       	ldi	r18, 0x7F	; 127
+ 192:	84 e8       	ldi	r24, 0x84	; 132
+ 194:	9e e1       	ldi	r25, 0x1E	; 30
+ 196:	21 50       	subi	r18, 0x01	; 1
+ 198:	80 40       	sbci	r24, 0x00	; 0
+ 19a:	90 40       	sbci	r25, 0x00	; 0
+ 19c:	e1 f7       	brne	.-8      	; 0x196 <main+0x38>
+ 19e:	00 c0       	rjmp	.+0      	; 0x1a0 <main+0x42>
+ 1a0:	00 00       	nop
+ 1a2:	e4 cf       	rjmp	.-56     	; 0x16c <main+0xe>
+
+000001a4 <_exit>:
+ 1a4:	f8 94       	cli
+
+000001a6 <__stop_program>:
+ 1a6:	ff cf       	rjmp	.-2      	; 0x1a6 <__stop_program>

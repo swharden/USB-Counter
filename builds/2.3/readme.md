@@ -22,6 +22,10 @@ _Approximately $13 total_
 
 ![](schematic.png)
 
+## Preview Render
+
+![](3d.png)
+
 ## Resources
 
 * [100 MHz frequency counter](https://www.electronics-lab.com/project/100mhz-frequency-counter-with-pic16f628a-2/) (designed by Hristo) uses the TLV3501 for its frontend

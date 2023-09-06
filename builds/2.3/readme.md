@@ -13,7 +13,7 @@ This folder contains design notes for a ***talking frequency counter*** designed
 * **FT231** USB Serial Adapter ([$2.33 on Mouser](https://www.mouser.com/ProductDetail/FTDI/FT231XS-R?qs=Gp1Yz1mis3WduRPsgrTbtg%3D%3D))
 * **Diode** 100V 4A 4ns recovery ([$0.13 on Mouser](https://www.mouser.com/ProductDetail/Panjit/1N4148W_R1_00001?qs=sPbYRqrBIVnqVztCqPNVrw%3D%3D))
 * **Speaker** 8Ω 300 mW ([$2.09 on Mouser](https://www.mouser.com/ProductDetail/DB-Unlimited/SM231508-1?qs=t9M3m0YJX4Ng139DBuQXjw%3D%3D))
-* **USB Connector** type B micro ([$0.50 on Mouser](https://www.mouser.com/ProductDetail/CUI-Devices/UJ2-MIBH-G-SMT-TR?qs=IS%252B4QmGtzzpvS1XQusp0iA%3D%3D))
+* **USB Connector** type B micro ([$0.46 on Mouser](https://www.mouser.com/ProductDetail/Amphenol-FCI/10118193-0001LF?qs=Ywefl8B65e63Nsqd%252B8HZaQ%3D%3D))
 * **0802 Components** are purchased in bulk and essentially free
 
 _Approximately $13 total_

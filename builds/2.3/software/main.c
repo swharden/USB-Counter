@@ -27,17 +27,9 @@ Pin 25 is pulled high. Ground to indicate a button press.
 #include "NumberSpeaker.h"
 #include "Serial.h"
 
-void led_toggle(){
-	PORTD.OUTTGL = PIN7_bm;
-}
-
-void led_on(){
-	PORTD.OUTCLR = PIN7_bm;
-}
-
-void led_off(){
-	PORTD.OUTSET = PIN7_bm;
-}
+#define setup_led() PORTD.DIRSET = PIN7_bm
+#define led_on() PORTD.OUTCLR = PIN7_bm
+#define led_off() PORTD.OUTSET = PIN7_bm
 
 volatile uint32_t COUNTER;
 ISR(TCD0_OVF_vect)
@@ -63,7 +55,13 @@ ISR(RTC_CNT_vect){
 	if (RTC_COUNT == 800){
 		RTC_COUNT = 0;
 		TCD0.CTRLE = TCD_SCAPTUREA_bm;
-		while ((TCD0.STATUS & TCD_CMDRDY_bm) == 0);
+		
+		// Normally we would wait for sync, but this hangs infinitely if EXTCLK has no signal.
+		//while ((TCD0.STATUS & TCD_CMDRDY_bm) == 0); // TODO: timeout if EXTCLK not present
+		
+		// Instead, just wait a bit for sync to happen.
+		_delay_us(100);
+		
 		COUNT_NOW = COUNTER + TCD0.CAPTUREA;
 		COUNT_DISPLAY = COUNT_NOW - COUNT_PREVIOUS;
 		COUNT_DISPLAY = COUNT_DISPLAY * 10;
@@ -72,10 +70,6 @@ ISR(RTC_CNT_vect){
 	}
 	
 	RTC.INTFLAGS = 0x11; // interrupt handled
-}
-
-void setup_led(){
-	PORTD.DIRSET = PIN7_bm;
 }
 
 void setup_system_clock_24MHz(){
@@ -135,16 +129,24 @@ int main(void)
 	
 	sei(); // Enable global interrupts
 	
-	printf("\r\nSTARTING...\r\n");
+	printf("\r\n");
+	printf("\r\n");
+	printf("Talking Frequency Counter 2.3");
+	printf("\r\n");
 	
-	speak_digit(1);
+	led_on();
+	speak_digit(2);
 	speak_point();
-	speak_digit(0);
+	speak_digit(3);
+	_delay_ms(200);
+	led_off();
 	
 	while (1){
 		wait_for_button_press();
+		uint32_t count = COUNT_DISPLAY;
 		led_on();
-		speak_mhz(COUNT_DISPLAY, 3);
+		print_with_commas(count);
+		speak_mhz(count, 3);
 		_delay_ms(200);
 		led_off();
 	}

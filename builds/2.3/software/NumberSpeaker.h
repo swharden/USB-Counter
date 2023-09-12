@@ -112,19 +112,18 @@ void speak_digits(uint32_t value){
 
 void speak_mhz(uint32_t frequency, uint8_t decimals){
 	
-	if (frequency == 0){
-		printf("0");
-		speak_digit(0);
-		return;
-	}
-	
 	uint32_t divisor = 1000000000;
 	uint8_t real_numbers_seen = 0;
 	
 	uint32_t exit_after_divisor = 100000;
+	
+	uint8_t said_something = 0;
+	
 	while (decimals--){
 		exit_after_divisor/=10;
 	}
+	
+	printf("SAYING: ");
 	
 	while(divisor > 0){
 		uint8_t digit = frequency/divisor;
@@ -136,6 +135,7 @@ void speak_mhz(uint32_t frequency, uint8_t decimals){
 		if (real_numbers_seen){
 			printf("%d ", digit);
 			speak_digit(digit);
+			said_something = 1;
 			if (divisor==1000000){
 				printf(". ");
 				speak_point();
@@ -149,5 +149,11 @@ void speak_mhz(uint32_t frequency, uint8_t decimals){
 			break;
 		}
 	}
+	
+	if (!said_something){
+		printf("0");
+		speak_digit(0);
+	}
+	
 	printf("\r\n");
 }

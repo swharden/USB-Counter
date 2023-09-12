@@ -35,3 +35,20 @@ _Approximately $13 total_
 * [Play Audio from SPI Flash with a Microcontroller](https://swharden.com/blog/2023-08-26-spi-flash-audio/)
 
 * [Speaking Numbers with a Microcontroller](https://swharden.com/blog/2023-08-19-speaking-microcontroller/)
+
+## Notes During the Build
+* PCB edges should be rounded
+* Green LEDs should have 47k resistors (not 10k)
+* USB lines are incorrect. They should be:
+  * 1. VCC
+  * 2. ?
+  * 3. ?
+  * 4. ID (nc)
+  * 5. GND
+* Need to order more .1 µF caps
+* Speaker holes should be bigger
+* Volume knob holes should be bigger
+* Volume knob polarity should be reversed
+* Label programmer pins
+* Amplifier shutdown pin should be grounded (not tied to VCC)
+* Amplifier resistors should be R12=47k and R7=1k

@@ -2,7 +2,7 @@
 
 This folder contains design notes for a ***talking frequency counter*** designed to help visually impaired radio operators to know what frequency they are transmitting on by speaking the frequency out loud when a button is pressed. This design uses a high-speed analog comparator to amplify signals on the frontend, measures them directly with a microcontroller, sends that data to a PC using a USB serial adapter, and also says the frequency out loud using a speaker.
 
-> **⚠️ WARNING:** THIS PROJECT IS A WORK IN PROGRESS
+> **⚠️ WARNING:** This is a work in progress. This board design has some errors which will be corrected in a future build.
 
 ## Components
 * **AP2112K-3.3TRG1** 600 mA 3.3V LDO regulator ([$0.35 from Mouser](https://www.mouser.com/ProductDetail/Diodes-Incorporated/AP2112K-3.3TRG1?qs=x6A8l6qLYDDPYHosCdzh%2FA%3D%3D))
@@ -36,6 +36,12 @@ _Approximately $13 total_
 
 * [Speaking Numbers with a Microcontroller](https://swharden.com/blog/2023-08-19-speaking-microcontroller/)
 
+## Photo
+
+Oof that's a lot of bodges
+
+![](photo.png)
+
 ## Notes During the Build
 * PCB edges should be rounded
 * Green LEDs should have 47k resistors (not 10k)
@@ -56,3 +62,8 @@ _Approximately $13 total_
 * Test points should be labeled.
 * Add a test point for comparator input and output.
 * Ground screw holes.
+* Omit RX led (only TX needed)
+* Use smaller volume knob and move it away from the button
+* Speaker hides power LED
+* Move prog header to edge of board
+* The load resistor "optional" label is floating beneath the RX/TX leds

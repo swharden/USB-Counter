@@ -52,3 +52,7 @@ _Approximately $13 total_
 * Label programmer pins
 * Amplifier shutdown pin should be grounded (not tied to VCC)
 * Amplifier resistors should be R12=47k and R7=1k
+* The button is wired wrong. Bottom right pin should be grounded.
+* Test points should be labeled.
+* Add a test point for comparator input and output.
+* Ground screw holes.

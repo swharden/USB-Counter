@@ -67,3 +67,6 @@ Oof that's a lot of bodges
 * Speaker hides power LED
 * Move prog header to edge of board
 * The load resistor "optional" label is floating beneath the RX/TX leds
+* Omit C14 and replace R17 with a 1k resistor
+* Use green LEDs everywhere
+* Fix the double-press issue

@@ -34,8 +34,8 @@ Pin 25 is pulled high. Ground to indicate a button press.
 volatile uint32_t COUNTER;
 ISR(TCD0_OVF_vect)
 {
-	TCD0.INTFLAGS = TCD_OVF_bm;
 	COUNTER+=4096;
+	TCD0.INTFLAGS = TCD_OVF_bm;
 }
 
 volatile uint16_t RTC_COUNT=0;
@@ -63,6 +63,10 @@ ISR(RTC_CNT_vect){
 		_delay_us(100);
 		
 		COUNT_NOW = COUNTER + TCD0.CAPTUREA;
+		if (COUNT_NOW < COUNT_PREVIOUS){
+			uint32_t diff = 0 - COUNT_PREVIOUS;
+			COUNT_NOW += diff;
+		}
 		COUNT_DISPLAY = COUNT_NOW - COUNT_PREVIOUS;
 		COUNT_DISPLAY = COUNT_DISPLAY * 10;
 		COUNT_PREVIOUS = COUNT_NOW;
@@ -109,8 +113,24 @@ void setup_button(){
 	PORTF.PIN5CTRL = PORT_PULLUPEN_bm;
 }
 
+uint8_t is_button_down(){
+	if (PORTF.IN & PIN5_bm){
+		return 0;
+		} else {
+		return 1;
+	}
+}
+
+uint8_t is_button_up(){
+	if (PORTF.IN & PIN5_bm){
+		return 1;
+		} else {
+		return 0;
+	}
+}
+
 void wait_for_button_press(){
-	while(PORTF.IN & PIN5_bm){} // pin 25
+	while(is_button_up()){} // pin 25
 }
 
 void setup_DAC(){
@@ -141,13 +161,30 @@ int main(void)
 	_delay_ms(200);
 	led_off();
 	
+	uint8_t count2 = 0;
+	
 	while (1){
-		wait_for_button_press();
+		
+		count2 += 1;
+		if (count2 >= 10){
+			count2 = 0;
+		}
+		
+		while(!COUNT_NEW);
 		uint32_t count = COUNT_DISPLAY;
-		led_on();
+		COUNT_NEW = 0;
+		
+		if (count > 0){
+			led_on();
+			} else {
+			led_off();
+		}
+		
+		printf("%d ", count2);
 		print_with_commas(count);
-		speak_mhz(count, 3);
-		_delay_ms(200);
-		led_off();
+		
+		if (is_button_down()){
+			speak_mhz(count, 3);
+		}
 	}
 }

@@ -132,7 +132,7 @@ void speak_mhz(uint32_t frequency, uint8_t decimals){
 			real_numbers_seen = 1;
 		}
 		
-		if (real_numbers_seen){
+		if (real_numbers_seen || (divisor<10000000)){
 			printf("%d ", digit);
 			speak_digit(digit);
 			said_something = 1;

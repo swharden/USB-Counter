@@ -70,3 +70,5 @@ Oof that's a lot of bodges
 * Omit C14 and replace R17 with a 1k resistor
 * Use green LEDs everywhere
 * Fix the double-press issue
+* RF front-end: use a dual diode
+* RF front-end: don't tap COMP_OUT with a LED (do that in software)

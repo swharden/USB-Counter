@@ -3192,7 +3192,7 @@
     (property "Value" "R_VOL" (at 34.925 172.72 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" (at 36.83 171.45 0)
+    (property "Footprint" "Potentiometer_THT:Potentiometer_Vishay_T73YP_Vertical" (at 36.83 171.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 36.83 171.45 0)

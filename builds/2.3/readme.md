@@ -72,3 +72,6 @@ Oof that's a lot of bodges
 * Fix the double-press issue
 * RF front-end: use a dual diode
 * RF front-end: don't tap COMP_OUT with a LED (do that in software)
+* Just add TX test pad (not FTDI chip)
+* Load comparator output
+* Jumper to bypass AC coupling on input

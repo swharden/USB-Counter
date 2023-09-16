@@ -14,6 +14,7 @@ This folder contains design notes for a ***talking frequency counter*** designed
 * **Diode** 100V 4A 4ns recovery ([$0.13 on Mouser](https://www.mouser.com/ProductDetail/Panjit/1N4148W_R1_00001?qs=sPbYRqrBIVnqVztCqPNVrw%3D%3D))
 * **Speaker** 8Ω 300 mW ([$2.09 on Mouser](https://www.mouser.com/ProductDetail/DB-Unlimited/SM231508-1?qs=t9M3m0YJX4Ng139DBuQXjw%3D%3D))
 * **USB Connector** type B micro ([$0.46 on Mouser](https://www.mouser.com/ProductDetail/Amphenol-FCI/10118193-0001LF?qs=Ywefl8B65e63Nsqd%252B8HZaQ%3D%3D))
+* **USB Connector (next time)** use USBC ([$0.80 on Mouser](https://www.mouser.com/ProductDetail/GCT/USB4105-GF-A?qs=KUoIvG%2F9IlY%2FMLlBMpStpA%3D%3D))
 * **0802 Components** are purchased in bulk and essentially free
 
 _Approximately $13 total_

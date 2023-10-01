@@ -2899,8 +2899,8 @@
     (property "Datasheet" "~" (at 130.81 35.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 73480599-838e-4654-811d-0106eced6f3c))
-    (pin "2" (uuid ed0998ae-887b-497e-afc6-9b45f48f1e67))
+    (pin "1" (uuid 032a15cf-e3a0-4450-9999-91f308922d5c))
+    (pin "2" (uuid f48a3547-ccef-40f0-9d0e-fe2226081d6b))
     (instances
       (project "talking-counter"
         (path "/bc948f24-ca1e-4e17-90c0-4fb791b09c5b"
@@ -3423,7 +3423,7 @@
     )
   )
 
-  (symbol (lib_id "Connector:Conn_01x03_Pin") (at 208.28 35.56 90) (mirror x) (unit 1)
+  (symbol (lib_id "Connector:Conn_01x03_Pin") (at 208.28 35.56 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7caeb1f9-80c0-4ee1-92a9-b5950c10a9dd)
     (property "Reference" "J2" (at 208.28 30.48 90)
@@ -3484,7 +3484,7 @@
     (property "Value" "USB_C_Receptacle_PowerOnly_6P" (at 30.48 22.86 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal" (at 34.29 35.56 0)
+    (property "Footprint" "Library:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal" (at 34.29 35.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" (at 30.48 38.1 0)
@@ -3848,7 +3848,7 @@
     (property "Value" ".1u" (at 71.755 82.55 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" (at 67.945 88.5952 0)
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" (at 67.945 88.5952 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 71.755 87.63 0)
@@ -4454,8 +4454,8 @@
     (property "Datasheet" "~" (at 49.53 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 4f833cae-ad74-42f8-973f-3b83347cf739))
-    (pin "2" (uuid e8057ecb-e901-4491-bed5-fa9647a0fd22))
+    (pin "1" (uuid 0b2ddbaf-903b-480a-9067-53147cda5ac2))
+    (pin "2" (uuid db658702-b4ce-4479-9578-a1c4212ea0f6))
     (instances
       (project "talking-counter"
         (path "/bc948f24-ca1e-4e17-90c0-4fb791b09c5b"

@@ -8,12 +8,12 @@ class  ButtonManager
 	}
 	
 	void setup(){
-		PORTD.DIRCLR = PIN5_bm;
-		PORTD.PIN5CTRL = PORT_PULLUPEN_bm;
+		PORTC.DIRCLR = PIN3_bm;
+		PORTC.PIN3CTRL = PORT_PULLUPEN_bm;
 	}
 	
 	uint8_t is_down(){
-		if (PORTD.IN & PIN5_bm){
+		if (PORTC.IN & PIN3_bm){
 			return 0;
 			} else {
 			return 1;

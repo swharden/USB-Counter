@@ -97,14 +97,19 @@ void setup_rtc_gate(){
 
 int main(void)
 {
-	setup_system_clock_24MHz();
 	leds.setup();
+	leds.status_on();
+	setup_system_clock_24MHz();
 	setup_extclk_counter();
 	setup_DAC();
 	setup_rtc_gate();
 	serial.setup();
 	button.setup();
 	sei(); // Enable global interrupts
+	
+	_delay_ms(100);
+	leds.power_on();
+	leds.status_off();
 	
 	while (1){
 		

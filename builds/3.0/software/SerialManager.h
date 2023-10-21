@@ -60,14 +60,12 @@ class SerialManager{
 		
 		write_line_break();
 	}
-	
-	private:
 
 	static void write_line_break(){
 		write_char('\r');
 		write_char('\n');
 	}
-
+	
 	static void write_char(char c)
 	{
 		while (!(USART0.STATUS & USART_DREIF_bm)) {;}

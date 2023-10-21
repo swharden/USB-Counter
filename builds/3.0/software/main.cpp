@@ -14,17 +14,18 @@ SerialManager serial = SerialManager();
 ButtonManager button = ButtonManager();
 
 volatile uint32_t COUNTER;
+volatile uint16_t RTC_COUNT=0;
+uint8_t COUNT_NEW = 0;
+uint32_t COUNT_NOW = 0;
+
 ISR(TCD0_OVF_vect)
 {
 	COUNTER+=4096;
 	TCD0.INTFLAGS = TCD_OVF_bm;
 }
 
-volatile uint16_t RTC_COUNT=0;
-uint8_t COUNT_NEW = 0;
-uint32_t COUNT_DISPLAY = 0;
-uint32_t COUNT_NOW = 0;
-uint32_t COUNT_PREVIOUS = 0;
+#define WAIT_FOR_SYNC 0
+
 ISR(RTC_CNT_vect){
 	
 	// set PWM level for analog output
@@ -32,29 +33,22 @@ ISR(RTC_CNT_vect){
 		DAC0.DATA = GetNextAudioLevel() << 8;
 	}
 	
-	// count ticks to gate counter
+	// 800 overflows occurs 10 times per second
 	RTC_COUNT++;
 	if (RTC_COUNT == 800){
 		RTC_COUNT = 0;
 		TCD0.CTRLE = TCD_SCAPTUREA_bm;
 		
-		// Normally we would wait for sync, but this hangs infinitely if EXTCLK has no signal.
-		//while ((TCD0.STATUS & TCD_CMDRDY_bm) == 0); // TODO: timeout if EXTCLK not present
-		
-		// Instead, just wait a bit for sync to happen.
-		_delay_us(100);
+		if (WAIT_FOR_SYNC){
+			while ((TCD0.STATUS & TCD_CMDRDY_bm) == 0);	// This hangs infinitely if EXTCLK has no signal
+			} else {
+			_delay_us(100); // Assume sync happened after a bit of time
+		}
 		
 		COUNT_NOW = COUNTER + TCD0.CAPTUREA;
-		if (COUNT_NOW < COUNT_PREVIOUS){
-			uint32_t diff = 0 - COUNT_PREVIOUS;
-			COUNT_NOW += diff;
-		}
-		COUNT_DISPLAY = COUNT_NOW - COUNT_PREVIOUS;
-		COUNT_DISPLAY = COUNT_DISPLAY * 10;
-		COUNT_PREVIOUS = COUNT_NOW;
+		
 		COUNT_NEW = 1;
 	}
-
 	
 	RTC.INTFLAGS = 0x11; // interrupt handled
 }
@@ -95,6 +89,23 @@ void setup_rtc_gate(){
 	RTC.CLKSEL = RTC_CLKSEL_XTAL32K_gc; // clock in XOSC23K pin
 }
 
+
+uint32_t COUNT_LAST;
+uint32_t get_next_count(){
+	while(COUNT_NEW == 0){}
+	COUNT_NEW = 0;
+	
+	if (COUNT_NOW >= COUNT_LAST){
+		uint32_t COUNT_DIFF = COUNT_NOW - COUNT_LAST;
+		COUNT_LAST = COUNT_NOW;
+		return COUNT_DIFF * 10;
+		} else {
+		// an overflow occurred so take the next count
+		COUNT_LAST = COUNT_NOW;
+		return get_next_count();
+	}
+}
+
 int main(void)
 {
 	leds.setup();
@@ -111,24 +122,34 @@ int main(void)
 	leds.power_on();
 	leds.status_off();
 	
+	
+	serial.write_line_break();
+	serial.write_string("Talking frequency counter 3.0");
+	serial.write_line_break();
+	
+	// say the version number
+	speak_digit(3);
+	speak_point();
+	speak_digit(0);
+	
 	while (1){
 		
-		while(!COUNT_NEW);
-		uint32_t count = COUNT_DISPLAY;
-		COUNT_NEW = 0;
+		uint32_t count = get_next_count();
 		
-		if (count > 0){
+		if (count > 1000000UL){
 			leds.signal_on();
 			} else {
 			leds.signal_off();
 		}
 		
-		//serial.write_number_with_commas(count);
+		serial.write_number_with_commas(count);
 		
 		if (button.is_down()){
 			leds.status_on();
+			while(button.is_down()){}
 			serial.write_number_with_commas(count);
 			speak_mhz(count, 3);
+			get_next_count(); // skip a count to make sure the next one is accurate
 			leds.status_off();
 		}
 	}
